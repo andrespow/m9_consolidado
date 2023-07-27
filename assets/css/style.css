@@ -38,7 +38,7 @@ header {
     transition: .3s;
 }
 
-header.sticky{
+header.sticky {
     background: var(--bg-color);
     padding: 13px 18%;
     box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
@@ -289,7 +289,7 @@ span {
 }
 
 .layer:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, #191919);
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, #191919);
 }
 
 .layer h3 {
@@ -313,7 +313,7 @@ span {
 .layer h5 {
     position: absolute;
     width: 100%;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: 500;
     color: var(--bg-color);
     bottom: 0;
@@ -327,6 +327,25 @@ span {
     bottom: 48%;
     opacity: 1;
 }
+
+.layer a {
+    width: 100%;
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+}
+
+.layer:hover a {
+    bottom: 30%;
+    opacity: 1;
+}
+
+
 
 .contact {
     background: #8067f0eb;
@@ -358,6 +377,18 @@ span {
 
 .contact .action form input[type="email"] {
     max-width: 100%;
+    width: 350px;
+    padding: 12px 15px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    margin: 0 10px 20px 0;
+    border-radius: 30px;
+}
+
+.contact .action form input[type="text"] {
+    max-width: 100%;
     width: 470px;
     padding: 12px 15px;
     background: var(--bg-color);
@@ -379,15 +410,16 @@ span {
     cursor: pointer;
 }
 
-.ends{
+.ends {
     text-align: center;
     padding: 40px;
 }
 
-.ends p{
+.ends p {
     font-size: var(--p-font);
     letter-spacing: 1let;
 }
+
 .nav-mini {
     display: none;
 }
@@ -398,13 +430,13 @@ span {
         transition: .3s;
     }
 
-    
-    section{
+
+    section {
         padding: 70px 3%;
         transition: .3s;
     }
 
-    .contact{
+    .contact {
         width: 95%;
         transition: .3s;
     }
@@ -412,16 +444,16 @@ span {
 }
 
 
-@media (max-width: 970px){
-    #menu-icon{
+@media (max-width: 970px) {
+    #menu-icon {
         display: block;
     }
 
-    .home{
+    .home {
         min-height: 80vh;
     }
 
-    .navlist{
+    .navlist {
         position: absolute;
         top: -600px;
         left: 0;
@@ -432,7 +464,7 @@ span {
         transition: all .40s;
     }
 
-    .navlist a{
+    .navlist a {
         display: block;
         padding: 1.2rem;
         margin: 1.5rem;
@@ -440,67 +472,74 @@ span {
         color: var(--bg-color);
     }
 
-    .navlist a:hover{
+    .navlist a:hover {
         background: var(--bg-color);
         color: var(--main-color);
     }
 
-    .navlist a::after{
+    .navlist a::after {
         display: none;
     }
-    .navlist.active{
+
+    .navlist.active {
         top: 100%;
     }
 
 }
 
-@media (max-width: 800px){
-    .home{
+@media (max-width: 800px) {
+    .home {
         grid-template-columns: 1fr;
         min-height: 130vh;
         grid-gap: 1rem;
     }
 
-    .home-text{
+    .home-text {
         padding-top: 55px;
     }
 
-    .home-img{
+    .home-img {
         text-align: center;
     }
 
-    .home-img img{
+    .home-img img {
         width: 440px;
         height: auto;
     }
 
-    .about{
+    .about {
         grid-template-columns: 1fr;
     }
 
-    .about-img{
+    .about-img {
         text-align: center;
         margin-bottom: 30px;
     }
 
-    :root{
+    :root {
         --big-font: 3.4rem;
         --h2-font: 2rem;
     }
 
-    section{
+    section {
         padding: 65px 3%;
         transition: .3s;
     }
 
 }
 
-@media (max-width: 540px){
-    .contact .action form input[type='email']{
+@media (max-width: 540px) {
+    .contact .action form input[type='email'] {
         width: 310px;
     }
 
-    
+
+}
+
+@keyframes fill-bar {
+    to {
+        transform: translateX(0%);
+    }
 }
 
 
