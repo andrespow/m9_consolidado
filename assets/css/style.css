@@ -193,7 +193,7 @@ span {
 }
 
 .home-img img {
-    max-width: 100%;
+    max-width: 70%;
     width: 540px;
     height: auto;
 }
@@ -206,7 +206,7 @@ span {
 }
 
 .about-img img {
-    max-width: 100%;
+    max-width: 70%;
     width: 540%;
     height: auto;
 }
@@ -529,7 +529,12 @@ span {
 }
 
 @media (max-width: 540px) {
+
+
     .contact .action form input[type='email'] {
+        width: 310px;
+    }
+    .contact .action form input[type='text'] {
         width: 310px;
     }
 
